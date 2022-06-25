@@ -1,7 +1,7 @@
-import { Post } from "@types"
-import { listPosts } from "../usecases/listPosts"
+import { Post } from "@/types"
+import { listPosts } from "@/usecases/listPosts"
 import { useEffect, useState } from "react"
-import { REQUEST_TIME } from "../constants"
+import { REQUEST_TIME, POSTS_PER_PAGE } from "@/constants"
 
 export const usePosts = () => {
   const [error, setError] = useState<boolean>(false)
@@ -33,5 +33,9 @@ export const usePosts = () => {
     return () => clearTimeout(loadTimer)
   })
 
-  return { loading, posts }
+  return {
+    count: Math.floor((posts?.length || 0) / POSTS_PER_PAGE),
+    loading,
+    posts,
+  }
 }

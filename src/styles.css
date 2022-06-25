@@ -1,28 +1,4 @@
-* {
-  font-family: Consolas;
-  font-weight: 500;
-}
-
 html, body {
   margin: 0;
   background-color: #191c20;
-  color: #ffcd01
-}
-
-.App {
-  padding: 24px
-}
-
-.post {
-  cursor: pointer;
-}
-
-.avatar {
-  width: 60px;
-  border-radius: 30px;
-}
-
-.header-top {
-  display: flex;
-  justify-content: space-between;
 }

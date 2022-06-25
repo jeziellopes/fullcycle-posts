@@ -1,1 +1,2 @@
-export * from './post'
+export * from '@/types/post'
+export * from '@/types/tag'
