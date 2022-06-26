@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useNavigate } from "react-router-dom";
 import MuiCard from '@mui/material/Card';
 import Box from '@mui/material/Box';
 import CardMedia from '@mui/material/CardMedia';
@@ -8,13 +9,23 @@ import { capitalize } from '@mui/material';
 import { Tags } from '@/components';
 import { tags } from '@/config';
 
+
 type Props = {
   title: string
+  postId: string 
 };
 
-export const Card = ({ title }: Props) => {
+export const CardPost = ({ title, postId }: Props) => {
+  const navigate = useNavigate()
+
+  const handleClick = () => {
+    navigate(`/post/${postId}`)
+  }
+
   return (
-    <MuiCard sx={[{
+    <MuiCard
+      onClick={handleClick}
+      sx={[{
         cursor: 'pointer',
         display: 'flex',
         flexDirection: 'row',
@@ -51,10 +62,7 @@ export const Card = ({ title }: Props) => {
             flexDirection: 'column',
             justifyContent: 'space-between',
           }}>
-            <Typography
-              sx={{ color: '#ffcd01' }}
-              gutterBottom
-            >
+            <Typography gutterBottom >
               {capitalize(title)}
             </Typography>
             <Tags tags={tags('front')}/>

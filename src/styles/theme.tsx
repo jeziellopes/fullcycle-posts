@@ -16,7 +16,7 @@ const theme = createTheme({
       color: '#ffcd01'
     },
     fontFamily: 'Consolas',
-    fontSize: 14
+    fontSize: 12
   },
   transitions: {
     duration: {
