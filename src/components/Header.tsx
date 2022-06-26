@@ -21,7 +21,7 @@ export const Header = ({ title }: Props) => {
            }}
           onClick={() => navigate('/')}
         />
-        <Link href="https://jeziellopes.github.io" target="_blank">
+        <Link href="https://github.com/jeziellopes/fullcycle-posts#imers%C3%A3o-fullcycle-8---desafio-reactjs" target="_blank">
           <CardMedia
             src="https://avatars.githubusercontent.com/u/50778558?v=4"
             alt="github profile"
