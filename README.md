@@ -3,22 +3,22 @@
 
 Desafio React.js: https://github.com/jeziellopes/fullcycle-posts
 
+![Screen](screen.png)
+
 ## Requirements
 
-* You need to use Material-UI
+* Use Material-UI
 * List only post title (main route)
 * Redirect to post on click (secondary route)
 
 ## How to run
 
 ```bash
-
   # install dependencies
   npm install
 
   # start project
   npm start
-
 ```
 
 ## Informações do desafio
